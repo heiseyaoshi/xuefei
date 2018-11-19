@@ -1,12 +1,5 @@
-{% extends "base.html" %}
-
-{% block header %}
-  Index
-{% endblock %}
-
-{% block content %}
-    <h1>Index</h1>
-    {% for file in files %}
-        <a href="{{ url_for('file', file_id=file.id) }}" target="_blank">{{ file.title }}</a>
-    {% endfor %}  
-{% endblock %}
+{% for file in files %}
+    <a> {{ file.title }}</a>
+    <b href='www.localhost:3000/file'{{file.id}}></b>
+    <h1>{{file.tags}}</h1>
+{% endfor %} 
