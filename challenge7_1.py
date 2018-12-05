@@ -7,7 +7,7 @@ def co2():
     df = df[df['Series code']=='EN.ATM.CO2E.KT'].set_index('Country code')
     df = df.drop(['Country name','Series code','Series name','SCALE','Decimals'],axis=1)
     df.replace({'..':pd.np.nan},inplace=True)
-    df.fillna(method='ffill',axis=1).fillna(method='bfill',axis=1)
+    df = df.fillna(method='ffill',axis=1).fillna(method='bfill',axis=1)
     df.dropna(how='all',inplace=True)
     df['Sum emissions']=df.sum(axis=1)
     df = df['Sum emissions']
