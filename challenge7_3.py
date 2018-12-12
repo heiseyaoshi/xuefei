@@ -65,7 +65,7 @@ def climate_plot():
             figsize=(16,9),
             ax = axes[1,0]
             )
-    ax3.set_xlabel('Ouarters')
+    ax3.set_xlabel('Quarters')
     ax3.set_ylabel('Temperature')
 
     ax4 = data_temperature_Q.plot(
